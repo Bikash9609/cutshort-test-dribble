@@ -25,14 +25,19 @@ export const BoxSummaryTypography = styled(Typography)`
 	color: ${({ theme }) => theme.palette.text.light};
 `;
 
-function BoxWithIconText({ summary, title, icon, isActive, handleClick }) {
+function BoxWithIconText({ summary, title, icon, isActive, handleClick, sx }) {
 	return (
 		<PlanningItemStack
 			direction='column'
 			alignItems='flex-start'
 			className={isActive ? 'active' : ''}
 			onClick={handleClick}
-			sx={{ cursor: 'pointer', height: ['100%', '180px'] }}
+			sx={{
+				cursor: 'pointer',
+				width: ['75vw', '100%'],
+				height: ['100%', '180px'],
+				...sx,
+			}}
 		>
 			<IconButton
 				disableFocusRipple

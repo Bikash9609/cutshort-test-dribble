@@ -183,6 +183,7 @@ function Steps({ currentStep, control }) {
 										summary={keywords.Onboarding.WikisDocsTaskProjects}
 										handleClick={() => true}
 										isActive={props.field.value === '1'}
+										sx={{ ml: ['-0.6rem', 0] }}
 									/>
 								}
 								control={<Radio sx={{ display: 'none' }} />}
